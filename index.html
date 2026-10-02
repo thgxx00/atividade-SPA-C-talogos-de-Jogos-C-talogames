@@ -1,1 +1,38 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cátalogames | Catálogo de Jogos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="#" class="logo" onclick="mostrarPagina('inicio'); return false;">
+      <span class="logo-icone">🎮</span>
+      <span>CÁTALOGAMES</span>
+    </a>
+
+    <nav class="menu">
+      <button onclick="mostrarPagina('inicio')">Início</button>
+      <button onclick="mostrarPagina('cadastro')">Cadastrar Jogos</button>
+      <button onclick="mostrarPagina('lista')">Jogos Cadastrados</button>
+      <button onclick="mostrarPagina('sobre')">Sobre</button>
+    </nav>
+  </header>
+
+  <main id="app" class="conteudo"></main>
+
+  <footer class="rodape">
+    <p>🎮 CÁTALOGAMES — Sua coleção de jogos em um só lugar.</p>
+  </footer>
+</body>
+</html>
