@@ -1,1 +1,363 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --azul: #1763a6;
+  --azul-claro: #318bdb;
+  --fundo: #080d16;
+  --painel: rgba(10, 17, 28, 0.94);
+  --texto: #f3f6fa;
+  --texto-suave: #aab6c5;
+  --borda: rgba(85, 155, 220, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--texto);
+  background-color: var(--fundo);
+  background-image:
+    linear-gradient(rgba(5, 10, 18, 0.88), rgba(5, 10, 18, 0.96)),
+    url("../fundo_do_site.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.cabecalho {
+  width: 100%;
+  min-height: 85px;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: rgba(5, 11, 20, 0.96);
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.logo-icone {
+  font-size: 32px;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu button {
+  color: white;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.menu button:hover {
+  background: rgba(23, 99, 166, 0.2);
+  border-color: var(--azul);
+  color: #69b6ff;
+}
+
+.conteudo {
+  width: min(1150px, 92%);
+  min-height: calc(100vh - 160px);
+  margin: 0 auto;
+  padding: 55px 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 18px;
+}
+
+.hero h1 span {
+  color: var(--azul-claro);
+}
+
+.hero p {
+  color: var(--texto-suave);
+  font-size: 21px;
+  margin: 0 auto 30px;
+  max-width: 650px;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.botao {
+  border: 1px solid var(--azul);
+  background: var(--azul);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.botao:hover {
+  background: var(--azul-claro);
+  transform: translateY(-2px);
+}
+
+.botao-secundario {
+  background: transparent;
+}
+
+.secao {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.titulo-secao {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(22px, 4vw, 30px);
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: var(--texto-suave);
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1px solid #34465d;
+  outline: none;
+  background: #0b1421;
+  color: white;
+  font-size: 17px;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(49, 139, 219, 0.15);
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+.formulario .botao {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.mensagem {
+  margin-top: 15px;
+  color: #78d99b;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.topo-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contador {
+  color: var(--texto-suave);
+  font-size: 18px;
+}
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  background: rgba(7, 14, 24, 0.8);
+}
+
+th, td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(85, 155, 220, 0.15);
+  font-size: 17px;
+}
+
+th {
+  background: rgba(23, 99, 166, 0.28);
+  color: #9ed0ff;
+  font-weight: 700;
+}
+
+tr:hover td {
+  background: rgba(49, 139, 219, 0.06);
+}
+
+.capa-jogo {
+  width: 65px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  background: #172334;
+  border: 1px solid var(--borda);
+}
+
+.botao-acao {
+  padding: 7px 11px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: #132236;
+  color: white;
+  font-size: 16px;
+  margin: 2px;
+}
+
+.botao-acao:hover {
+  background: var(--azul);
+}
+
+.botao-excluir:hover {
+  background: #a32636;
+}
+
+.favorito {
+  color: #ffd34e;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+}
+
+.vazio {
+  text-align: center;
+  padding: 35px 15px;
+  color: var(--texto-suave);
+  font-size: 20px;
+}
+
+.sobre-texto {
+  color: var(--texto-suave);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.sobre-texto p {
+  margin-bottom: 15px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  color: var(--texto-suave);
+  background: rgba(5, 11, 20, 0.96);
+  border-top: 1px solid var(--borda);
+  font-size: 16px;
+}
+
+@media (max-width: 700px) {
+  .cabecalho {
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .menu button {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .conteudo {
+    padding: 30px 0;
+  }
+
+  .secao {
+    padding: 20px 15px;
+  }
+
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-completo,
+  .formulario .botao {
+    grid-column: auto;
+  }
+}
